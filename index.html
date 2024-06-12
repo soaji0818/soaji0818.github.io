@@ -13,9 +13,8 @@
     
     <!-- 인터넷에서 이미지 불러오기 -->
     <h3>인터넷 환경에서의 이미지</h3>
-    if (username) == "abc"{
-        <p><img src="https://image.imnews.imbc.com/operate/common/category/vod/nwtodey/__icsFiles/afieldfile/2023/05/02/720x352.png" alt="조보아 사진"/></p>
-    }
+    <div id="imageContainer"></div>
+
     <!-- 크기 조절하기 -->
     <h3>크기 조절</h3>
     <p>
@@ -27,5 +26,22 @@
             alt="조보아 사진"
             width="300" />
     </p>
+
+    <!-- 파이스크립트 -->
+    <script type="text/py">
+        def load_image(event):
+            username = document["username"].value
+            image_container = document["imageContainer"]
+            image_container.innerHTML = ""  # 이미지 컨테이너 초기화
+
+            if username == "abc":
+                # 조건이 충족되면 이미지 추가
+                img = document.create_element("img")
+                img.src = "https://image.imnews.imbc.com/operate/common/category/vod/nwtodey/__icsFiles/afieldfile/2023/05/02/720x352.png"
+                img.alt = "조보아 사진"
+                image_container.append(img)
+
+        document["loadButton"].bind("click", load_image)
+    </script>
 </body>
 </html>
