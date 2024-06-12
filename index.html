@@ -1,100 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personalized Timetable</title>
-    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css">
-    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-
-        h1 {
-            text-align: center;
-        }
-
-        #username {
-            display: block;
-            margin: 20px auto;
-            padding: 10px;
-            font-size: 16px;
-        }
-
-        #loadButton {
-            display: block;
-            margin: 20px auto;
-            padding: 10px 20px;
-            font-size: 16px;
-        }
-
-        .timetable {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px auto;
-        }
-
-        .timetable th, .timetable td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: center;
-        }
-
-        .timetable th {
-            background-color: #f2f2f2;
-        }
-    </style>
+    <meta charset="utf-8" />
+    <title>이미지</title>
 </head>
 <body>
-    <h1>Personalized Class Timetable</h1>
-    <!-- 사용자 이름 입력 -->
-    <input type="text" id="username" placeholder="Enter your name">
-    <!-- 시간표 로드 버튼 -->
-    <button id="loadButton">Load Timetable</button>
-    <!-- 시간표가 표시될 영역 -->
-    <div id="timetable"></div>
+    <!-- 인터넷에서 이미지 불러오기 -->
+    <h3>인터넷 환경에서의 이미지</h3>
+    <p><img src="http://rgo4.com/files/attach/images/2676751/909/558/019/093271cf31ad9cabdf4216e7bbcc7b7b.jpg" alt="조보아 사진"/></p>
 
-    <!-- Pyscript 환경 설정 -->
-    <py-env>
-        - pandas
-        - openpyxl
-    </py-env>
-
-    <!-- Pyscript 코드 -->
-    <py-script>
-        import pandas as pd
-        import js
-
-        def load_timetable(event):
-            # 입력된 사용자 이름을 가져옴
-            username = js.document.querySelector("#username").value
-            if not username:
-                # 이름이 입력되지 않은 경우 경고 메시지 표시
-                js.alert("Please enter your name.")
-                return
-
-            # 사용자 이름에 맞는 엑셀 파일 경로 설정
-            filename = f"/mnt/data/{username}.xlsx"
-            
-            try:
-                # 엑셀 파일 읽기
-                df = pd.read_excel(filename, engine='openpyxl')
-                # 시간표를 화면에 렌더링
-                render_timetable(df)
-            except FileNotFoundError:
-                # 파일이 없을 경우 경고 메시지 표시
-                js.alert(f"No timetable found for {username}.")
-
-        def render_timetable(df):
-            # 데이터프레임을 HTML 테이블로 변환
-            table_html = df.to_html(classes='timetable', index=False)
-            # HTML 테이블을 페이지에 삽입
-            js.document.querySelector("#timetable").innerHTML = table_html
-
-        # 버튼 클릭 시 load_timetable 함수 호출
-        js.document.querySelector("#loadButton").addEventListener("click", load_timetable)
-    </py-script>
+    <!-- 크기 조절하기 -->
+    <h3>크기 조절</h3>
+    <p>
+        <img src="http://image.chosun.com/sitedata/image/201808/10/2018081001569_0.jpg"
+            alt="조보아 사진" />
+    </p>
+    <p>
+        <img src="http://image.chosun.com/sitedata/image/201808/10/2018081001569_0.jpg"
+            alt="조보아 사진"
+            width="300" />
+    </p>
 </body>
 </html>
+출처: https://hongku.tistory.com/363 [IT에 취.하.개.:티스토리]
