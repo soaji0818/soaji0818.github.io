@@ -4,19 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personalized Timetable</title>
-    <!-- 스타일 시트와 Pyscript 라이브러리 불러오기 -->
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css">
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #username {
+            display: block;
+            margin: 20px auto;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        #loadButton {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        .timetable {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+
+        .timetable th, .timetable td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .timetable th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
     <h1>Personalized Class Timetable</h1>
-    <!-- 사용자 이름을 입력받는 텍스트 입력 필드 -->
+    <!-- 사용자 이름 입력 -->
     <input type="text" id="username" placeholder="Enter your name">
-    <!-- 시간표를 불러오는 버튼 -->
+    <!-- 시간표 로드 버튼 -->
     <button id="loadButton">Load Timetable</button>
-    <!-- 시간표를 표시할 영역 -->
+    <!-- 시간표가 표시될 영역 -->
     <div id="timetable"></div>
+
+    <!-- Pyscript 환경 설정 -->
+    <py-env>
+        - pandas
+    </py-env>
 
     <!-- Pyscript 코드 -->
     <py-script>
@@ -31,12 +74,12 @@
                 js.alert("Please enter your name.")
                 return
 
-            # 사용자 이름에 맞는 CSV 파일 이름 생성
-            filename = f"{username}.csv"
+            # 사용자 이름에 맞는 CSV 파일 경로 설정
+            filename = f"/mnt/data/{username}.csv"
             
             try:
-                # CSV 파일을 읽어 데이터프레임으로 변환
-                df = pd.read_csv(f"/mnt/data/{filename}")
+                # CSV 파일 읽기
+                df = pd.read_csv(filename)
                 # 시간표를 화면에 렌더링
                 render_timetable(df)
             except FileNotFoundError:
