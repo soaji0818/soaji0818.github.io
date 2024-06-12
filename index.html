@@ -3,21 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload and Display Timetable</title>
+    <title>Personalized Timetable</title>
+    <!-- 스타일 시트와 Pyscript 라이브러리 불러오기 -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css">
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
 </head>
 <body>
-    <h1>Upload and Display Timetable</h1>
-    <input type="file" id="csvFile" accept=".csv">
+    <h1>Personalized Class Timetable</h1>
+    <!-- 사용자 이름을 입력받는 텍스트 입력 필드 -->
+    <input type="text" id="username" placeholder="Enter your name">
+    <!-- 시간표를 불러오는 버튼 -->
     <button id="loadButton">Load Timetable</button>
+    <!-- 시간표를 표시할 영역 -->
     <div id="timetable"></div>
-
-    <!-- Pyscript 환경 설정 -->
-    <py-env>
-        - pandas
-    </py-env>
 
     <!-- Pyscript 코드 -->
     <py-script>
@@ -25,25 +24,32 @@
         import js
 
         def load_timetable(event):
-            input_file = js.document.querySelector("#csvFile").files[0]
-            if not input_file:
-                js.alert("Please select a CSV file.")
+            # 입력된 사용자 이름을 가져옴
+            username = js.document.querySelector("#username").value
+            if not username:
+                # 이름이 입력되지 않은 경우 경고 메시지 표시
+                js.alert("Please enter your name.")
                 return
 
-            reader = js.FileReader.new()
-            reader.readAsText(input_file)
-
-            def on_load(event):
-                csv_content = event.target.result
-                df = pd.read_csv(pd.compat.StringIO(csv_content))
+            # 사용자 이름에 맞는 CSV 파일 이름 생성
+            filename = f"{username}.csv"
+            
+            try:
+                # CSV 파일을 읽어 데이터프레임으로 변환
+                df = pd.read_csv(f"/mnt/data/{filename}")
+                # 시간표를 화면에 렌더링
                 render_timetable(df)
-
-            reader.onload = on_load
+            except FileNotFoundError:
+                # 파일이 없을 경우 경고 메시지 표시
+                js.alert(f"No timetable found for {username}.")
 
         def render_timetable(df):
+            # 데이터프레임을 HTML 테이블로 변환
             table_html = df.to_html(classes='timetable', index=False)
+            # HTML 테이블을 페이지에 삽입
             js.document.querySelector("#timetable").innerHTML = table_html
 
+        # 버튼 클릭 시 load_timetable 함수 호출
         js.document.querySelector("#loadButton").addEventListener("click", load_timetable)
     </py-script>
 </body>
