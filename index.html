@@ -59,6 +59,7 @@
     <!-- Pyscript 환경 설정 -->
     <py-env>
         - pandas
+        - openpyxl
     </py-env>
 
     <!-- Pyscript 코드 -->
@@ -74,12 +75,12 @@
                 js.alert("Please enter your name.")
                 return
 
-            # 사용자 이름에 맞는 CSV 파일 경로 설정
-            filename = f"/mnt/data/{username}.csv"
+            # 사용자 이름에 맞는 엑셀 파일 경로 설정
+            filename = f"/mnt/data/{username}.xlsx"
             
             try:
-                # CSV 파일 읽기
-                df = pd.read_csv(filename)
+                # 엑셀 파일 읽기
+                df = pd.read_excel(filename, engine='openpyxl')
                 # 시간표를 화면에 렌더링
                 render_timetable(df)
             except FileNotFoundError:
