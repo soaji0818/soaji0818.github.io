@@ -10,14 +10,23 @@
     <input type="text" id="username" placeholder="학번을 입력하세요">
     <!-- 시간표 로드 버튼 -->
     <button id="loadButton">불러오기</button>
+    <div id="timetable"></div> <!-- 시간표가 표시될 곳 -->
 
-<script>
-    if(username == 30811){
-         <p>
-        <img src="http://image.chosun.com/sitedata/image/201808/10/2018081001569_0.jpg"
-            alt="조보아 사진" />
-        </p>}
-        
+    <script>
+        function loadTimetable() {
+            var username = document.getElementById('username').value;
+            if(username == '30811') {
+                var img = document.createElement('img');
+                img.src = 'http://image.chosun.com/sitedata/image/201808/10/2018081001569_0.jpg';
+                img.alt = '조보아 사진';
+
+                var timetableDiv = document.getElementById('timetable');
+                timetableDiv.innerHTML = ''; // 이전 내용 지우기
+                timetableDiv.appendChild(img);
+            }
+        }
+
+        document.getElementById('loadButton').onclick = loadTimetable;
     </script>
 
 </body>
