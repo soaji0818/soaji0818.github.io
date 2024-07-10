@@ -18,20 +18,34 @@
         var timetableDiv = document.getElementById('timetable');
         timetableDiv.innerHTML = ''; // 이전 내용 지우기
 
-        if (username == '30811') {
+        var imageUrls = {
+            '30701': 'https://mblogthumb-phinf.pstatic.net/MjAyNDA3MTBfMTkx/MDAxNzIwNTcxMzY4NDc3.S9ZsJNefEXvlXEDoET1dgC1Pq39GlBM2mBe6Jq9BcT8g.BybtkjRriuo5sZJcj3mxisMlCyCih55c4dxB7bX9zgQg.PNG/30701.png?type=w800',
+            '30702': 'https://example.com/image2.jpg', // 실제 URL로 대체하세요
+            '30703': 'https://mblogthumb-phinf.pstatic.net/MjAyNDA3MTBfMjc2/MDAxNzIwNTcxMzkyNDI0.W0pujD7R6vqpAtYPJZBqrd_TxtVtsBBW9REMr_vovJEg.Bfl7NIYzI_ohmTvXA1eqQNF7zMSN8gX0Z1ELhV2mhPYg.PNG/30703.png?type=w800',
+            '30704': 'https://example.com/image4.jpg', // 실제 URL로 대체하세요
+            '30705': 'https://example.com/image5.jpg', // 실제 URL로 대체하세요
+            '30706': 'https://example.com/image6.jpg', // 실제 URL로 대체하세요
+            '30707': 'https://example.com/image7.jpg', // 실제 URL로 대체하세요
+            '30708': 'https://example.com/image8.jpg', // 실제 URL로 대체하세요
+            '30709': 'https://example.com/image9.jpg', // 실제 URL로 대체하세요
+            '30710': 'https://example.com/image10.jpg', // 실제 URL로 대체하세요
+            '30711': 'https://example.com/image11.jpg', // 실제 URL로 대체하세요
+            '30712': 'https://example.com/image12.jpg', // 실제 URL로 대체하세요
+            '30713': 'https://example.com/image13.jpg', // 실제 URL로 대체하세요
+            '30714': 'https://example.com/image14.jpg', // 실제 URL로 대체하세요
+            '30715': 'https://example.com/image15.jpg', // 실제 URL로 대체하세요
+            '30716': 'https://example.com/image16.jpg', // 실제 URL로 대체하세요
+            '30717': 'https://example.com/image17.jpg', // 실제 URL로 대체하세요
+            '30718': 'https://example.com/image18.jpg', // 실제 URL로 대체하세요
+            '30719': 'https://example.com/image19.jpg', // 실제 URL로 대체하세요
+            '30720': 'https://example.com/image20.jpg', // 실제 URL로 대체하세요
+            '30721': 'https://example.com/image21.jpg'  // 실제 URL로 대체하세요
+        };
+
+        if (imageUrls[username]) {
             var img = document.createElement('img');
-            img.src = 'https://mblogthumb-phinf.pstatic.net/MjAyNDA3MTBfMTkx/MDAxNzIwNTcxMzY4NDc3.S9ZsJNefEXvlXEDoET1dgC1Pq39GlBM2mBe6Jq9BcT8g.BybtkjRriuo5sZJcj3mxisMlCyCih55c4dxB7bX9zgQg.PNG/30701.png?type=w800';
-            img.alt = '조보아 사진';
-            timetableDiv.appendChild(img);
-        } else if (username == '30812') {
-            var img = document.createElement('img');
-            img.src = 'https://mblogthumb-phinf.pstatic.net/MjAyNDA3MTBfMjc2/MDAxNzIwNTcxMzkyNDI0.W0pujD7R6vqpAtYPJZBqrd_TxtVtsBBW9REMr_vovJEg.Bfl7NIYzI_ohmTvXA1eqQNF7zMSN8gX0Z1ELhV2mhPYg.PNG/30703.png?type=w800'; // 다른 이미지 URL
-            img.alt = '다른 사진';
-            timetableDiv.appendChild(img);
-        } else if (username == '30813') {
-            var img = document.createElement('img');
-            img.src = 'https://blog.kakaocdn.net/dn/bl0DMU/btsoyJgO8Ry/q5MJ2JZuiGNvXUvVX6yQoK/img.png'; // 또 다른 이미지 URL
-            img.alt = '또 다른 사진';
+            img.src = imageUrls[username];
+            img.alt = '시간표 이미지';
             timetableDiv.appendChild(img);
         } else {
             timetableDiv.textContent = '해당 학번에 대한 정보가 없습니다.';
