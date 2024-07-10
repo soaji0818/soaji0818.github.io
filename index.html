@@ -47,7 +47,7 @@
         </div>
         <!-- 시간표 로드 버튼 -->
         <button id="loadButton">불러오기</button>
-        <div id="timetable"></div> <!-- 시간표가 표시될 곳 -->
+        <div id="timetable"></div> <!-- 시간표 표시 -->
        
 <script>
     document.getElementById('loadButton').addEventListener('click', function() {
@@ -60,7 +60,7 @@
             '30702': 'https://mblogthumb-phinf.pstatic.net/MjAyNDA3MTBfMzcg/MDAxNzIwNTczMzQ2OTg4.dYZ99qHf8djlbDWxARCh3ahWAlSRkOUUbDehDvi8-3wg.IvT2YhKXpCI0Cq7v4_ABRd0lntyIPKq5KIkpyQ_Q4ZQg.JPEG/KakaoTalk_20240710_095857304_01.jpg?type=w800', // 실제 URL로 대체하세요
             '30703': 'https://mblogthumb-phinf.pstatic.net/MjAyNDA3MTBfMTky/MDAxNzIwNTczMzQ3NjUx.KuBCc0uFijU4Q1BOSH3bxALTvgWF2h-HUhbRQslSgiMg.RtmWjjwQhPMHB4ofDDT9xGm6yluboEe5gPBgj8RkAOEg.JPEG/KakaoTalk_20240710_095857304_02.jpg?type=w800',
             '30704': 'https://mblogthumb-phinf.pstatic.net/MjAyNDA3MTBfNyAg/MDAxNzIwNTczMzQ4MDc4.0Pui7SoKy3NMoC3P3ichHqVkif0KTn-qA-hNb1EkxKAg.Pg0wLnGouYeZjFPwNO2Zww0fhbrQVaXZEEF_WFjnmYYg.JPEG/KakaoTalk_20240710_095857304_03_-_%25E8%25B9%2582%25EB%2593%25AD%25EA%25B6%2597%25E8%25B9%2582%25EF%25BF%25BD.jpg?type=w800', // 실제 URL로 대체하세요
-            '30705': 'https://example.com/image5.jpg', // 실제 URL로 대체하세요
+            '30705': 'https://example.com/image5.jpg', 
             '30706': 'https://mblogthumb-phinf.pstatic.net/MjAyNDA3MTBfMTc4/MDAxNzIwNTczMzQ3NzI3.cJIOiDXjZDV2Q52wRf9pSAS6MgMzDNc55rCipqE6rH8g.yh6x8dIqm7pEMINIKd2eRirjw5xQAYJOYy4NblTHgCog.JPEG/KakaoTalk_20240710_095857304_04.jpg?type=w800', // 실제 URL로 대체하세요
             '30707': 'https://mblogthumb-phinf.pstatic.net/MjAyNDA3MTBfMjg3/MDAxNzIwNTczMzQ3Nzcx.6Ojr1VgOEa8oZWK44-moBxZcWAeApQdtqRNJ-HNk5zIg.YxstBcCsbDd_HCE6ed1gh2_4Ufnp90rPUBwfhrv4Figg.JPEG/KakaoTalk_20240710_095857304_05_-_%25E8%25B9%2582%25EB%2593%25AD%25EA%25B6%2597%25E8%25B9%2582%25EF%25BF%25BD.jpg?type=w800', // 실제 URL로 대체하세요
             '30708': 'https://mblogthumb-phinf.pstatic.net/MjAyNDA3MTBfMzIg/MDAxNzIwNTczMzQ4MTY5.RrTVb7LqompueQ-M0iVjK_4zjnUI6Pvi33O_Z9OL_FIg.OHLaZrvUlPdixVeGGOX6sn66RUgKy9SIF04NVa9Z1nog.JPEG/KakaoTalk_20240710_095857304_06.jpg?type=w800', // 실제 URL로 대체하세요
@@ -70,13 +70,34 @@
             '30712': 'https://mblogthumb-phinf.pstatic.net/MjAyNDA3MTBfMjk0/MDAxNzIwNTczMzQ4NjUz.z_vZ2KBjtck-t1BwIio1lDGEmvPKmNUA1p-d3wHdWdwg._4m85DbV9OeYR32DTyNWHeF8coKGTVgAJMzGyGdHI0kg.JPEG/KakaoTalk_20240710_095857304_10.jpg?type=w800', // 실제 URL로 대체하세요
             '30713': 'https://mblogthumb-phinf.pstatic.net/MjAyNDA3MTBfMjU0/MDAxNzIwNTczMzQ4ODAw.GX5sKpY5mWZDBNWYDwsQ8Y76po_EfrVyfAE_Nm0OxgMg.j4xyn1pXKm17v5vFkFtyF-CpRjxMLiBbv2R6vBXLYUQg.JPEG/KakaoTalk_20240710_095857304_11.jpg?type=w800', // 실제 URL로 대체하세요
             '30714': 'https://mblogthumb-phinf.pstatic.net/MjAyNDA3MTBfMTEx/MDAxNzIwNTczMzQ5MTg3.2EPVZW--E5hZ-Zp7eOAIousFAsK6mOpUYwRzalNEomQg.SQBaytPFoDXtxhcnTev86Ls-GZwTeOK8GWdHi8EOF8Mg.JPEG/KakaoTalk_20240710_095857304_12.jpg?type=w800', // 실제 URL로 대체하세요
-            '30715': 'https://example.com/image15.jpg', // 실제 URL로 대체하세요
+            '30715': 'https://example.com/image15.jpg', 
             '30716': 'https://mblogthumb-phinf.pstatic.net/MjAyNDA3MTBfMjkx/MDAxNzIwNTczMzQ4NjY3.LSgRm3zZgLOdYynhMQt3Vqf-KaqhZVn7rDWejnxkicAg.VI7WB8Pm5ACo5m7K1a70e2iUvQWkJJYZKFWC6L6DlAgg.JPEG/KakaoTalk_20240710_095857304_13.jpg?type=w800', // 실제 URL로 대체하세요
-            '30717': 'https://example.com/image17.jpg', // 실제 URL로 대체하세요
+            '30717': 'https://example.com/image17.jpg', 
             '30718': 'https://mblogthumb-phinf.pstatic.net/MjAyNDA3MTBfMjE1/MDAxNzIwNTczMzQ5MTM3.MRiDGjjEcVPaNxSjzshGTbOSczHo6vvZ9R6n6bjaFOwg.-so_lO6EpKF2TD6mPKtXqxLDPmWzY-kuaeslHHec9Ewg.JPEG/KakaoTalk_20240710_095857304_14.jpg?type=w800', // 실제 URL로 대체하세요
             '30719': 'https://mblogthumb-phinf.pstatic.net/MjAyNDA3MTBfMTcw/MDAxNzIwNTczMzQ5MjAx.t8Nkpe7cOneRNekbYvbqI1L2bWThsoklqNnaG4ESQmUg.dg7hgL9W_T6X4C5cap0HZ8BrRxYABwk2toy0eIE19IQg.JPEG/KakaoTalk_20240710_095857304_15.jpg?type=w800', // 실제 URL로 대체하세요
-            '30720': 'https://example.com/image20.jpg', // 실제 URL로 대체하세요
-            '30721': 'https://mblogthumb-phinf.pstatic.net/MjAyNDA3MTBfMjUg/MDAxNzIwNTczMzQ4Nzg2.6APafW0HKsU3Lh3QMX5vfJ17qBzIipwCTpJX9pbaz_8g.eCkq-N6ivhqB_GVwcsV_VYmzW4aHudUa5BtYuK3OHuIg.JPEG/KakaoTalk_20240710_095857304_16.jpg?type=w800'  // 실제 URL로 대체하세요
+            '30720': 'https://example.com/image20.jpg', 
+            '30721': 'https://mblogthumb-phinf.pstatic.net/MjAyNDA3MTBfMjUg/MDAxNzIwNTczMzQ4Nzg2.6APafW0HKsU3Lh3QMX5vfJ17qBzIipwCTpJX9pbaz_8g.eCkq-N6ivhqB_GVwcsV_VYmzW4aHudUa5BtYuK3OHuIg.JPEG/KakaoTalk_20240710_095857304_16.jpg?type=w800',
+            '30901': 'https://example.com/image30901.jpg',
+            '30902': 'https://example.com/image30902.jpg',
+            '30903': 'https://example.com/image30903.jpg',
+            '30904': 'https://example.com/image30904.jpg',
+            '30905': 'https://example.com/image30905.jpg',
+            '30906': 'https://example.com/image30906.jpg',
+            '30907': 'https://example.com/image30907.jpg',
+            '30908': 'https://example.com/image30908.jpg',
+            '30909': 'https://example.com/image30909.jpg',
+            '30910': 'https://example.com/image30910.jpg',
+            '30911': 'https://example.com/image30911.jpg',
+            '30912': 'https://example.com/image30912.jpg',
+            '30913': 'https://example.com/image30913.jpg',
+            '30914': 'https://example.com/image30914.jpg',
+            '30915': 'https://example.com/image30915.jpg',
+            '30916': 'https://example.com/image30916.jpg',
+            '30917': 'https://example.com/image30917.jpg',
+            '30918': 'https://example.com/image30918.jpg',
+            '30919': 'https://example.com/image30919.jpg',
+            '30920': 'https://example.com/image30920.jpg',
+            '30921': 'https://example.com/image30921.jpg'
         };
 
         if (imageUrls[username]) {
