@@ -3,11 +3,6 @@
 <head>
     <meta charset="utf-8" />
     <title>이미지</title>
-<style>
-  h1 {
-    text-align: center;
-  }
-</style>
 </head>
 <body>
     <h1>부천여자고등학교 개인 시간표</h1>
@@ -24,27 +19,27 @@
         timetableDiv.innerHTML = ''; // 이전 내용 지우기
 
         var imageUrls = {
-            '30701': 'https://mblogthumb-phinf.pstatic.net/MjAyNDA3MTBfMTkx/MDAxNzIwNTcxMzY4NDc3.S9ZsJNefEXvlXEDoET1dgC1Pq39GlBM2mBe6Jq9BcT8g.BybtkjRriuo5sZJcj3mxisMlCyCih55c4dxB7bX9zgQg.PNG/30701.png?type=w800',
-            '30702': 'https://example.com/image2.jpg', // 실제 URL로 대체하세요
-            '30703': 'https://mblogthumb-phinf.pstatic.net/MjAyNDA3MTBfMjc2/MDAxNzIwNTcxMzkyNDI0.W0pujD7R6vqpAtYPJZBqrd_TxtVtsBBW9REMr_vovJEg.Bfl7NIYzI_ohmTvXA1eqQNF7zMSN8gX0Z1ELhV2mhPYg.PNG/30703.png?type=w800',
-            '30704': 'https://example.com/image4.jpg', // 실제 URL로 대체하세요
+            '30701': 'https://mblogthumb-phinf.pstatic.net/MjAyNDA3MTBfMTk5/MDAxNzIwNTczMzQ3MDAy.LTUhqgFhv1KbMseP7Ea7nGTXcPKvWI6qDqnZ22v_wW4g.J8jhE4E4AQcYZy--JmBrvP3g5yKb5i7FnaD6qZlI2UEg.JPEG/KakaoTalk_20240710_095857304_-_%25E8%25B9%2582%25EB%2593%25AD%25EA%25B6%2597%25E8%25B9%2582%25EF%25BF%25BD.jpg?type=w800',
+            '30702': 'https://mblogthumb-phinf.pstatic.net/MjAyNDA3MTBfMzcg/MDAxNzIwNTczMzQ2OTg4.dYZ99qHf8djlbDWxARCh3ahWAlSRkOUUbDehDvi8-3wg.IvT2YhKXpCI0Cq7v4_ABRd0lntyIPKq5KIkpyQ_Q4ZQg.JPEG/KakaoTalk_20240710_095857304_01.jpg?type=w800', // 실제 URL로 대체하세요
+            '30703': 'https://mblogthumb-phinf.pstatic.net/MjAyNDA3MTBfMTky/MDAxNzIwNTczMzQ3NjUx.KuBCc0uFijU4Q1BOSH3bxALTvgWF2h-HUhbRQslSgiMg.RtmWjjwQhPMHB4ofDDT9xGm6yluboEe5gPBgj8RkAOEg.JPEG/KakaoTalk_20240710_095857304_02.jpg?type=w800',
+            '30704': 'https://mblogthumb-phinf.pstatic.net/MjAyNDA3MTBfNyAg/MDAxNzIwNTczMzQ4MDc4.0Pui7SoKy3NMoC3P3ichHqVkif0KTn-qA-hNb1EkxKAg.Pg0wLnGouYeZjFPwNO2Zww0fhbrQVaXZEEF_WFjnmYYg.JPEG/KakaoTalk_20240710_095857304_03_-_%25E8%25B9%2582%25EB%2593%25AD%25EA%25B6%2597%25E8%25B9%2582%25EF%25BF%25BD.jpg?type=w800', // 실제 URL로 대체하세요
             '30705': 'https://example.com/image5.jpg', // 실제 URL로 대체하세요
-            '30706': 'https://example.com/image6.jpg', // 실제 URL로 대체하세요
-            '30707': 'https://example.com/image7.jpg', // 실제 URL로 대체하세요
-            '30708': 'https://example.com/image8.jpg', // 실제 URL로 대체하세요
-            '30709': 'https://example.com/image9.jpg', // 실제 URL로 대체하세요
-            '30710': 'https://example.com/image10.jpg', // 실제 URL로 대체하세요
-            '30711': 'https://example.com/image11.jpg', // 실제 URL로 대체하세요
-            '30712': 'https://example.com/image12.jpg', // 실제 URL로 대체하세요
-            '30713': 'https://example.com/image13.jpg', // 실제 URL로 대체하세요
-            '30714': 'https://example.com/image14.jpg', // 실제 URL로 대체하세요
+            '30706': 'https://mblogthumb-phinf.pstatic.net/MjAyNDA3MTBfMTc4/MDAxNzIwNTczMzQ3NzI3.cJIOiDXjZDV2Q52wRf9pSAS6MgMzDNc55rCipqE6rH8g.yh6x8dIqm7pEMINIKd2eRirjw5xQAYJOYy4NblTHgCog.JPEG/KakaoTalk_20240710_095857304_04.jpg?type=w800', // 실제 URL로 대체하세요
+            '30707': 'https://mblogthumb-phinf.pstatic.net/MjAyNDA3MTBfMjg3/MDAxNzIwNTczMzQ3Nzcx.6Ojr1VgOEa8oZWK44-moBxZcWAeApQdtqRNJ-HNk5zIg.YxstBcCsbDd_HCE6ed1gh2_4Ufnp90rPUBwfhrv4Figg.JPEG/KakaoTalk_20240710_095857304_05_-_%25E8%25B9%2582%25EB%2593%25AD%25EA%25B6%2597%25E8%25B9%2582%25EF%25BF%25BD.jpg?type=w800', // 실제 URL로 대체하세요
+            '30708': 'https://mblogthumb-phinf.pstatic.net/MjAyNDA3MTBfMzIg/MDAxNzIwNTczMzQ4MTY5.RrTVb7LqompueQ-M0iVjK_4zjnUI6Pvi33O_Z9OL_FIg.OHLaZrvUlPdixVeGGOX6sn66RUgKy9SIF04NVa9Z1nog.JPEG/KakaoTalk_20240710_095857304_06.jpg?type=w800', // 실제 URL로 대체하세요
+            '30709': 'https://mblogthumb-phinf.pstatic.net/MjAyNDA3MTBfMTE2/MDAxNzIwNTczMzQ2OTkz.3ZohFp8C9r4OfZbXksghIcNzMA3CnmRZmTK2pYssSrcg.0rPC1wQugVllSlU7Zx3-VbWDvYiMpf6wtJ_3p08qv1sg.JPEG/KakaoTalk_20240710_095857304_07_-_%25E8%25B9%2582%25EB%2593%25AD%25EA%25B6%2597%25E8%25B9%2582%25EF%25BF%25BD.jpg?type=w800', // 실제 URL로 대체하세요
+            '30710': 'https://mblogthumb-phinf.pstatic.net/MjAyNDA3MTBfMjU5/MDAxNzIwNTczMzQ4MjIy.yvLXY9QgtUE6CNUmkElY4Y0iXNQmjlZu53jiD6jR-D0g.6fz4m6a1jQIcVo800vfh46ey4pgBZs_rgEgyXcyaHzgg.JPEG/KakaoTalk_20240710_095857304_08.jpg?type=w800', // 실제 URL로 대체하세요
+            '30711': 'https://mblogthumb-phinf.pstatic.net/MjAyNDA3MTBfMTcw/MDAxNzIwNTczMzQ3NjQy.4ECIt51pGwvgey7Zxgzea7mzlwAhA35GcORbxwY1SiEg.gisQ7-O83EGWVPNqF53Pn1m1FrasH60f_K5fPc3x_XYg.JPEG/KakaoTalk_20240710_095857304_09.jpg?type=w800', // 실제 URL로 대체하세요
+            '30712': 'https://mblogthumb-phinf.pstatic.net/MjAyNDA3MTBfMjk0/MDAxNzIwNTczMzQ4NjUz.z_vZ2KBjtck-t1BwIio1lDGEmvPKmNUA1p-d3wHdWdwg._4m85DbV9OeYR32DTyNWHeF8coKGTVgAJMzGyGdHI0kg.JPEG/KakaoTalk_20240710_095857304_10.jpg?type=w800', // 실제 URL로 대체하세요
+            '30713': 'https://mblogthumb-phinf.pstatic.net/MjAyNDA3MTBfMjU0/MDAxNzIwNTczMzQ4ODAw.GX5sKpY5mWZDBNWYDwsQ8Y76po_EfrVyfAE_Nm0OxgMg.j4xyn1pXKm17v5vFkFtyF-CpRjxMLiBbv2R6vBXLYUQg.JPEG/KakaoTalk_20240710_095857304_11.jpg?type=w800', // 실제 URL로 대체하세요
+            '30714': 'https://mblogthumb-phinf.pstatic.net/MjAyNDA3MTBfMTEx/MDAxNzIwNTczMzQ5MTg3.2EPVZW--E5hZ-Zp7eOAIousFAsK6mOpUYwRzalNEomQg.SQBaytPFoDXtxhcnTev86Ls-GZwTeOK8GWdHi8EOF8Mg.JPEG/KakaoTalk_20240710_095857304_12.jpg?type=w800', // 실제 URL로 대체하세요
             '30715': 'https://example.com/image15.jpg', // 실제 URL로 대체하세요
-            '30716': 'https://example.com/image16.jpg', // 실제 URL로 대체하세요
+            '30716': 'https://mblogthumb-phinf.pstatic.net/MjAyNDA3MTBfMjkx/MDAxNzIwNTczMzQ4NjY3.LSgRm3zZgLOdYynhMQt3Vqf-KaqhZVn7rDWejnxkicAg.VI7WB8Pm5ACo5m7K1a70e2iUvQWkJJYZKFWC6L6DlAgg.JPEG/KakaoTalk_20240710_095857304_13.jpg?type=w800', // 실제 URL로 대체하세요
             '30717': 'https://example.com/image17.jpg', // 실제 URL로 대체하세요
-            '30718': 'https://example.com/image18.jpg', // 실제 URL로 대체하세요
-            '30719': 'https://example.com/image19.jpg', // 실제 URL로 대체하세요
+            '30718': 'https://mblogthumb-phinf.pstatic.net/MjAyNDA3MTBfMjE1/MDAxNzIwNTczMzQ5MTM3.MRiDGjjEcVPaNxSjzshGTbOSczHo6vvZ9R6n6bjaFOwg.-so_lO6EpKF2TD6mPKtXqxLDPmWzY-kuaeslHHec9Ewg.JPEG/KakaoTalk_20240710_095857304_14.jpg?type=w800', // 실제 URL로 대체하세요
+            '30719': 'https://mblogthumb-phinf.pstatic.net/MjAyNDA3MTBfMTcw/MDAxNzIwNTczMzQ5MjAx.t8Nkpe7cOneRNekbYvbqI1L2bWThsoklqNnaG4ESQmUg.dg7hgL9W_T6X4C5cap0HZ8BrRxYABwk2toy0eIE19IQg.JPEG/KakaoTalk_20240710_095857304_15.jpg?type=w800', // 실제 URL로 대체하세요
             '30720': 'https://example.com/image20.jpg', // 실제 URL로 대체하세요
-            '30721': 'https://example.com/image21.jpg'  // 실제 URL로 대체하세요
+            '30721': 'https://mblogthumb-phinf.pstatic.net/MjAyNDA3MTBfMjUg/MDAxNzIwNTczMzQ4Nzg2.6APafW0HKsU3Lh3QMX5vfJ17qBzIipwCTpJX9pbaz_8g.eCkq-N6ivhqB_GVwcsV_VYmzW4aHudUa5BtYuK3OHuIg.JPEG/KakaoTalk_20240710_095857304_16.jpg?type=w800'  // 실제 URL로 대체하세요
         };
 
         if (imageUrls[username]) {
