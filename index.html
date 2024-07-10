@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="utf-8" />
-    <title>부천여자고등학교</title>
+    <title>이미지</title>
     <style>
         @font-face {
             font-family: 'GmarketSansMedium';
@@ -13,10 +13,18 @@
 
         h1 {
             font-family: 'GmarketSansMedium', Arial, sans-serif;
-            text-align: center;
+            text-align: center; /* 텍스트 가운데 정렬 */
         }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
         .input-container {
-            text-align: center; /* 입력 요소 가운데 정렬 */
             margin-bottom: 20px;
         }
 
@@ -28,19 +36,19 @@
             border: none;
             cursor: pointer;
         }
-
-        .button-container {
-            text-align: center; /* 버튼 가운데 정렬 */
-        }
     </style>
 </head>
 <body>
-    <h1>부천여자고등학교 개인 시간표</h1>
-    <!-- 사용자 이름 입력 -->
-    <input type="text" id="username" placeholder="학번을 입력하세요.">
-    <!-- 시간표 로드 버튼 -->
-    <button id="loadButton">불러오기</button>
-    <div id="timetable"></div> <!-- 시간표가 표시될 곳 -->
+    <div class="container">
+        <h1>부천여자고등학교 개인 시간표</h1>
+        <div class="input-container">
+            <!-- 사용자 이름 입력 -->
+            <input type="text" id="username" placeholder="학번을 입력하세요">
+        </div>
+        <!-- 시간표 로드 버튼 -->
+        <button id="loadButton">불러오기</button>
+        <div id="timetable"></div> <!-- 시간표가 표시될 곳 -->
+    </div>
 
 <script>
     document.getElementById('loadButton').addEventListener('click', function() {
